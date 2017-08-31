@@ -1,6 +1,6 @@
 import React from 'react';
+import IconLink from '../IconLink';
 
-const trial = ['github', 'twitter'];
 const rrss = [
   {name: 'github', link: 'https://github.com/estelapedrero'},
   {name: 'twitter', link: 'https://twitter.com/sala_de_star'},
@@ -12,9 +12,9 @@ class Footer extends React.Component {
     return (
       // className={styles.title}
       <footer>
-        <p>estelapedrero</p>
+        <p>made with * by estelapedrero</p>
         <ul>
-          {rrss.map((link, index) => <li key={index}><a href={link.link} target="_blank">{link.name}</a></li>)}
+          {rrss.map((link, index) => <IconLink key={index} name={link.name} link={link.link}/>)}
         </ul>
       </footer>
     );

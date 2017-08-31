@@ -5,8 +5,8 @@ class ListItem extends React.Component {
     return (
       <div>
         <li>
-          <input type="checkbox" id=/>
-          <label htmlFor=""></label>
+          <input type="checkbox" id={this.props.title} checked={this.props.done}/>
+          <label htmlFor={this.props.title}>{this.props.title}</label>
         </li>
       </div>
     );
