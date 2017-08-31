@@ -1,39 +1,61 @@
-// @import 'fonts';
-// @import 'variables';
-// @import 'reset';
+@import 'styles/variables';
+@import 'styles/reset';
 
 body {
     font-family: 'Raleway', sans-serif;
 }
+.wrapper {
+    width: 50%;
+    padding: 1em;
+    border: 2px dashed $primary-color;
+}
 .title {
   text-decoration: underline;
-  color: tomato;
+  color: $primary-color;
 }
 
 ul {
-    margin: 0;
-    list-style: none;
-    width: 50%;
+    padding: 0;
     li {
         display: flex;
         height: 2.4rem;
         padding: 0.3rem;
         align-items: center;
-        &:nth-child(2n+1){
-            background-color: tomato;
-            color: white;
+        color: $white;
+        &:nth-child(2n+1) {
+            background-color: $primary-color;
         }
-        &:nth-child(2n){
-            color: tomato;
-            background-color: white;
+        &:nth-child(2n) {
+            background-color: $dark-color;
         }
         &:hover {
-            background-color: grey;
-            color: black;
+            background-color: $alert-color;
+            color: $black;
         }
     }
     label {
         display: inline-block;
         margin-left: 0.8em;
     }
+}
+.formbox {
+    display: flex;
+    justify-content: space-between;
+
+    input {
+        width: 88%;
+        height: 2.2rem;
+        padding: 0 1em;
+        // font-size: 1rem;
+    }
+    .button {
+        width: 10%;
+    }
+}
+.button {
+
+    border-radius: 5px;
+    background-color: $primary-color;
+    color: $white;
+    font-size: 1.2em;
 }
