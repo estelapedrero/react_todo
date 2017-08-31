@@ -1,14 +1,24 @@
 import React, { Component } from 'react';
 import styles from './App.scss';
 
+import Header from './components/Header';
+import List from './components/List';
+import Footer from './components/Footer';
+
 class App extends Component {
 
   render() {
     return (
       <div>
-        <h1 className={styles.title}>Buenas noches señooooora!</h1>
+        <Header/>
         <div className={styles.wrapper}>
-            <ul>
+          <div className={styles.listbox}>
+            <h2>lista1</h2>
+            <List/>
+          </div>
+          <div className={styles.listbox}>
+          <h2>lista2</h2>
+            <ul className={styles.todolist}>
               <li>
                 <input type="checkbox" id="todo-1"/>
                 <label htmlFor="todo-1">Invitar a Bert a cenar</label>
@@ -30,7 +40,10 @@ class App extends Component {
               <input type="text" placeholder="add new task"/>
               <button className={styles.button}>add</button>
             </div>
+            </div>
         </div>
+
+        <Footer/>
       </div>
    );
   }
