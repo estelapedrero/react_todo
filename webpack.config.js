@@ -4,29 +4,20 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  // Tipo de sourcemap que queremos, este es el más
-  // rápido en devleopment, más info:
-  // https://webpack.js.org/configuration/devtool/
   devtool: 'cheap-module-eval-source-map',
 
-  // Punto de entrada de nuestra aplicación
   entry: './src/index.js',
 
-  // Punto de salida de nuestra aplicación
   output: {
     path: path.resolve(__dirname, 'public/assets'),
     filename: `bundle.js`,
     publicPath: '/assets/',
    },
 
-   // Orden en el que resolveremos las extensiones
-   // en caso de ser omitida en el import
    resolve: {
      extensions: ['.js', '.json'],
    },
 
-   // Loaders, en base a la extensión del archivo
-   // hacen ciertas transofrmaciones, como transpilar ES6 o SASS
    module: {
      rules: [
        {
@@ -55,7 +46,6 @@ module.exports = {
      ],
    },
 
-   // Configurar puerto y carpeta de los assets
    devServer: {
      contentBase: path.resolve(__dirname, 'public'),
      port: 8080,
@@ -64,7 +54,6 @@ module.exports = {
    plugins: [
     new ExtractTextPlugin('styles.css'),
   ],
-   // Poner colorines :)
    stats: {
     colors: true
    }
