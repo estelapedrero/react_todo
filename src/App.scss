@@ -1,0 +1,39 @@
+// @import 'fonts';
+// @import 'variables';
+// @import 'reset';
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+.title {
+  text-decoration: underline;
+  color: tomato;
+}
+
+ul {
+    margin: 0;
+    list-style: none;
+    width: 50%;
+    li {
+        display: flex;
+        height: 2.4rem;
+        padding: 0.3rem;
+        align-items: center;
+        &:nth-child(2n+1){
+            background-color: tomato;
+            color: white;
+        }
+        &:nth-child(2n){
+            color: tomato;
+            background-color: white;
+        }
+        &:hover {
+            background-color: grey;
+            color: black;
+        }
+    }
+    label {
+        display: inline-block;
+        margin-left: 0.8em;
+    }
+}
