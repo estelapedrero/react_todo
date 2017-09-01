@@ -4,6 +4,7 @@ import styles from './App.scss';
 import Header from './components/Header';
 import AddTask from './components/AddTask';
 import List from './components/List';
+import ListItem from './components/ListItem';
 import Footer from './components/Footer';
 
 class App extends Component {
