@@ -1,0 +1,18 @@
+@import "../../styles/variables";
+
+.button {
+    height: 3rem;
+    background-color: $primary-color;
+    padding: 0 0.8em;
+    color: $white;
+    font-size: 1.2em;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    &:hover {
+      background-color: $dark-color;
+    }
+    &:active {
+      box-shadow: 1px 1px 10px $black inset;
+    }
+}

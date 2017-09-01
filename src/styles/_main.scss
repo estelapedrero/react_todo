@@ -1,59 +1,13 @@
 .wrapper {
-  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .listbox {
   flex: auto;
-  margin: 0 1em;
+  margin-left: auto;
+  margin-right: auto;
   padding: 1em;
   border: 2px dashed $primary-color;
-}
-.title {
-  text-decoration: underline;
-  color: $primary-color;
-}
-
-.todolist {
-    padding: 0;
-    li {
-        display: flex;
-        height: 2.4rem;
-        padding: 0.3rem;
-        align-items: center;
-        color: $white;
-        &:nth-child(2n+1) {
-            background-color: $primary-color;
-        }
-        &:nth-child(2n) {
-            background-color: $dark-color;
-        }
-        &:hover {
-            background-color: $alert-color;
-            color: $black;
-        }
-    }
-    label {
-        display: inline-block;
-        margin-left: 0.8em;
-    }
-}
-.formbox {
-    display: flex;
-    justify-content: space-between;
-
-    input {
-        width: 88%;
-        height: 2.2rem;
-        padding: 0 1em;
-        // font-size: 1rem;
-    }
-    .button {
-        width: 10%;
-    }
-}
-.button {
-
-    border-radius: 5px;
-    background-color: $primary-color;
-    color: $white;
-    font-size: 1.2em;
+  position: relative;
 }

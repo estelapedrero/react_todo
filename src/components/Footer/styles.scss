@@ -1,0 +1,25 @@
+@import "../../styles/variables";
+
+.footer {
+  background-color: $grey-lightest;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8em;
+  margin-top: 2em;
+  p {
+    margin-left: 1em;
+  }
+}
+
+.rrss_list {
+  li {
+    display: inline-block;
+  }
+  a {
+    padding: 0.2em 1em;
+    &:hover {
+      color: $alert-color;
+    }
+  }
+}
