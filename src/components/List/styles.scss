@@ -12,22 +12,23 @@
         width: 9rem;
         text-align: center;
         border: 1px solid $black;
-        padding: 0.3rem;
+        margin: 0.3rem;
         align-items: center;
         color: $white;
-        &:nth-child(2n+1) {
-            background-color: $primary-color;
-        }
-        &:nth-child(2n) {
-            background-color: $dark-color;
-        }
+        background-color: $light-color;
+        // &:nth-child(2n+1) {
+        //     background-color: $primary-color;
+        // }
+        // &:nth-child(2n) {
+        //     background-color: $light-color;
+        // }
         &:hover {
-            background-color: $alert-color;
+            // background-color: $alert-color;
             color: $black;
         }
     }
     label {
-      padding-top: 1em;
+      padding-top: 1.5em;
     }
 }
 .button {
