@@ -8,7 +8,7 @@ class App extends Component {
 
     this.state = {
       tasks: [
-        { id: 1, title: 'Invitar a Bert a cenar', rank: 'leisure', done: true },
+        { id: 1, title: 'Invitar a Bert a cenar', rank: 'leisure', done: false },
         { id: 2, title: 'Dormir', rank: 'leisure', done: true },
         { id: 3, title: 'Patinar', rank: 'sport', done: false },
         { id: 4, title: 'Concierto The New Raemon', rank: 'music', done: false },
