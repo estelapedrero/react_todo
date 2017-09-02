@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
-
+import PropTypes from 'prop-types';
 import styles from './styles.scss';
 
 class ListItem extends Component {
+  static propTypes = {
+    done: PropTypes.bool,
+    id: PropTypes.number,
+    onToggle: PropTypes.func,
+    rank: PropTypes.string,
+    title: PropTypes.string,
+  }
+
   onInputChange = () => {
     this.props.onToggle(this.props.id);
   }

@@ -1,11 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const IconLink = () => (
-  <li key={this.props.index}>
-    <a href={this.props.link} target="_blank">
-      {this.props.name}
+const IconLink = props => (
+  <li key={props.index}>
+    <a href={props.link} target="_blank">
+      {props.name}
     </a>
   </li>
 );
+
+IconLink.propTypes = {
+  index: PropTypes.number,
+  link: PropTypes.string,
+  name: PropTypes.string,
+};
 
 export default IconLink;

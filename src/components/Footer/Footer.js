@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import IconLink from '../IconLink';
 import styles from './styles.scss';
 
@@ -12,7 +12,7 @@ const Footer = () => (
   <footer className={styles.footer}>
     <p>made with * by estelapedrero</p>
     <ul className={styles.rrss_list}>
-      {rrss.map((link, index) => <IconLink key={index} name={link.name} link={link.link}/>) }
+      {rrss.map((link, index) => <IconLink key={index} name={link.name} link={link.link} />) }
     </ul>
   </footer>
 );

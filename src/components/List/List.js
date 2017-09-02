@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ListItem from '../ListItem';
 import styles from './styles.scss';
 
 class List extends Component {
+  static propTypes = {
+    onToggle: PropTypes.func,
+    tasks: PropTypes.arrayOf(PropTypes.object),
+  }
+
   constructor(props) {
     super(props);
 

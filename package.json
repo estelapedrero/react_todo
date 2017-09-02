@@ -22,6 +22,7 @@
     "eslint-plugin-react": "^7.3.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "node-sass": "^4.5.3",
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "sass-loader": "^6.0.6",
@@ -30,6 +31,7 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server",
+    "lint:js": "eslint 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
