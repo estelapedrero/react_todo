@@ -7,24 +7,14 @@
     li {
         display: flex;
         flex-direction: column;
-        // justify-content: center;
         height: 9rem;
         width: 9rem;
         text-align: center;
         border: 1px solid $black;
         margin: 0.3rem;
         align-items: center;
-        color: $white;
-        background-color: $light-color;
-        // &:nth-child(2n+1) {
-        //     background-color: $primary-color;
-        // }
-        // &:nth-child(2n) {
-        //     background-color: $light-color;
-        // }
         &:hover {
-            // background-color: $alert-color;
-            color: $black;
+            text-decoration: underline;
         }
     }
     label {

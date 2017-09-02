@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styles from './styles.scss';
 
+const ENTER_KEYCODE = 13;
+
 class AddTask extends Component {
   // -- Definition
   static propTypes = {
@@ -27,6 +29,12 @@ class AddTask extends Component {
     this.setState({ title: event.target.value });
   }
 
+  onInputKeyDown = event => {
+    if (event.which === ENTER_KEYCODE) {
+      this.onAddClick();
+    }
+  }
+
   // -- Renders
   render() {
     return (
@@ -36,6 +44,7 @@ class AddTask extends Component {
           placeholder="add new task"
           value={this.state.title}
           onChange={this.onInputChange}
+          onKeyDown={this.onInputKeyDown}
         />
         <button className={styles.button} onClick={this.onAddClick}>add</button>
       </div>

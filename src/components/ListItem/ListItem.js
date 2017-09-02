@@ -17,7 +17,7 @@ class ListItem extends Component {
 
   render() {
     return (
-      <li className={this.props.rank}>
+      <li className={styles[this.props.rank]}>
         <input
           type="checkbox"
           onChange={this.onInputChange}

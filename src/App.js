@@ -38,7 +38,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.content}>
         <Header />
         <div className={styles.wrapper}>
           <AddTask addTask={this.addTask} />
