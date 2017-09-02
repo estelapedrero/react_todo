@@ -1,68 +1,55 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ListItem from '../ListItem';
-import ActionButton from '../ActionButton';
-
 import styles from './styles.scss';
 
-class List extends React.Component {
+class List extends Component {
+  constructor(props) {
+    super(props);
 
-  constructor () {
-    super();
     this.state = {
-      showTasks: true
-    }
+      showTasks: true,
+    };
+  }
+
+  onButtonClick = () => {
+    this.setState({
+      showTasks: !this.state.showTasks,
+    });
+  }
+
+  renderTasks = () => (
+    <ul className={styles.todolist}>
+      {
+        this.props.tasks.map(task => (
+          <ListItem
+            key={task.id}
+            onToggle={this.props.onToggle}
+            {...task}
+          />
+        ))
+      }
+    </ul>
+  )
+
+  renderTitle = () => {
+    const count = this.props.tasks.length;
+
+    return count === 0
+      ? 'evrything is done'
+      : `${count} ${count > 1 ? 'tasks' : 'task'} in the list`;
   }
 
   render() {
-    let taskList;
-    let buttonVal = 'show tasks';
-    const tasks = this._getTasks();
-    if(this.state.showTasks) {
-      buttonVal = 'hide tasks';
-      taskList = <ul className={styles.todolist}> {tasks} </ul>
-    }
-
     return (
       <div>
-        <p>{this._getTasksTitle(tasks.length)}</p>
-        <button onClick={this._handleClick.bind(this)} className={styles.button}>{buttonVal}</button>
-        {taskList}
+        <p>{this.renderTitle(this.props.tasks.length)}</p>
+        <button onClick={this.onButtonClick} className={styles.button}>
+          {this.state.showTasks ? 'hide' : 'show'} tasks
+        </button>
+        {this.state.showTasks && this.renderTasks()}
       </div>
     );
-  };
-
-  _getTasks() {
-    const todoList = [
-      {title: 'Invitar a Bert a cenar', rank: 'leisure', done: true},
-      {title: 'Dormir', rank: 'leisure', done: true},
-      {title: 'Patinar', rank: 'sport', done: false},
-      {title: 'Concierto The New Raemon', rank: 'music', done: false},
-      {title: 'Cena en jleos', rank: 'food', done: false},
-      {title: 'Llorar', rank: 'other', done: false}
-    ];
-    return todoList.map( (task, index) => {
-      return (
-        <ListItem
-          key={index} title={task.title} done={task.done} rank={task.rank} />
-      )
-    })
-  };
-
-  _getTasksTitle(taskCount){
-    if(taskCount === 0) {
-      return `everything is done`;
-    } else if(taskCount === 1) {
-      return `1 task in the list`;
-    } else{
-      return `${taskCount} tasks in the list`;
-    }
-  };
-
-  _handleClick() {
-    this.setState({
-      showTasks: !this.state.showTasks
-    })
-  };
+  }
 }
 
 export default List;
