@@ -8,7 +8,7 @@ To-do list to add tasks sorted by categories, check done/undone and remove.
 $ git clone https://github.com/estelapedrero/react_todo.git
 ```
 
-### Access the proyect
+### Access the project
 ```
 $ cd react_todo
 ```
