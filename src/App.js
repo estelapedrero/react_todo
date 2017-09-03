@@ -15,6 +15,13 @@ class App extends Component {
         { id: 5, title: 'Cena en jleos', rank: 'food', done: false },
         { id: 6, title: 'Llorar', rank: 'other', done: false },
       ],
+      ranks: [
+        { id: 1, value: 'leisure' },
+        { id: 2, value: 'food' },
+        { id: 3, value: 'music' },
+        { id: 4, value: 'other' },
+        { id: 5, value: 'sport' },
+      ],
     };
   }
 
@@ -36,15 +43,29 @@ class App extends Component {
     this.setState({ tasks });
   }
 
+  clickXClose = id => {
+    // console.log(id);
+    // const tasks = this.state.tasks.map(task => (
+    //   task.id === id ? { tasks.filter(task) } : task
+    // ));
+    const tasks = this.state.tasks.filter(task => task.id !== id);
+
+    this.setState({ tasks });
+  }
+
   render() {
     return (
       <div className={styles.content}>
         <Header />
         <div className={styles.wrapper}>
-          <AddTask addTask={this.addTask} />
+          <AddTask addTask={this.addTask} options={this.state.ranks} />
           <div className={styles.listbox}>
             <p>Short compilation of everything I should do next</p>
-            <List tasks={this.state.tasks} onToggle={this.toggleCheckbox} />
+            <List
+              tasks={this.state.tasks}
+              onToggle={this.toggleCheckbox}
+              clickClose={this.clickXClose}
+            />
           </div>
         </div>
         <Footer />

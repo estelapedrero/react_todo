@@ -4,6 +4,7 @@ import styles from './styles.scss';
 
 class ListItem extends Component {
   static propTypes = {
+    clickClose: PropTypes.func,
     done: PropTypes.bool,
     id: PropTypes.number,
     onToggle: PropTypes.func,
@@ -15,9 +16,14 @@ class ListItem extends Component {
     this.props.onToggle(this.props.id);
   }
 
+  onClickX = () => {
+    this.props.clickClose(this.props.id);
+  }
+
   render() {
     return (
       <li className={styles[this.props.rank]}>
+        <span onClick={this.onClickX}>x</span>
         <input
           type="checkbox"
           onChange={this.onInputChange}

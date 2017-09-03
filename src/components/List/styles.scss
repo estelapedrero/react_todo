@@ -7,18 +7,25 @@
     li {
         display: flex;
         flex-direction: column;
+        position: relative;
         height: 9rem;
         width: 9rem;
         text-align: center;
         border: 1px solid $black;
         margin: 0.3rem;
         align-items: center;
-        &:hover {
+        &:hover label{
             text-decoration: underline;
         }
     }
     label {
       padding-top: 1.5em;
+    }
+    span {
+      cursor: pointer;
+      position: absolute;
+      top: 0.2em;
+      right: 0.5em;
     }
 }
 .button {

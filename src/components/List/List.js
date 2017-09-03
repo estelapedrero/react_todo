@@ -5,6 +5,7 @@ import styles from './styles.scss';
 
 class List extends Component {
   static propTypes = {
+    clickClose: PropTypes.func,
     onToggle: PropTypes.func,
     tasks: PropTypes.arrayOf(PropTypes.object),
   }
@@ -29,6 +30,7 @@ class List extends Component {
         this.props.tasks.map(task => (
           <ListItem
             key={task.id}
+            clickClose={this.props.clickClose}
             onToggle={this.props.onToggle}
             {...task}
           />

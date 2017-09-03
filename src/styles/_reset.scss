@@ -31,20 +31,40 @@ body {
 li {
 	list-style: none;
 }
-input, button {
+
+input, button, select {
 	font-family: inherit;
 }
-input:focus {
-	outline: none;
-	outline-offset: 0;
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
+    background-color: #fff
+}
+select:-moz-focusring {
+    color: transparent;
+    outline: 0;
+    text-shadow: 0 0 0 #000
 }
 
-input[type=text],textarea {
-	box-shadow: none;
-	&:focus {
-		background-color: $white;
-  		border:1.5px solid $primary-color;
-	}
+select:not([multiple]) {
+    background-image: url(https://cdn4.iconfinder.com/data/icons/podcast-collection/100/caret-512.png);
+    background-repeat: no-repeat;
+    background-size: 1.2em auto;
+    background-position: 97% 50%;
+}
+
+input[type=email],input[type=number],input[type=text],select,textarea {
+    box-shadow: none;
+    border: 1px solid #bbb;
+		&:focus {
+			background-color: $white;
+	  	border:1.5px solid $primary-color;
+			outline: 0;
+			outline-offset: 0;
+		}
 }
 
 .link-icon {

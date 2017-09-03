@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Select from '../Select';
 import styles from './styles.scss';
 
 const ENTER_KEYCODE = 13;
@@ -8,6 +9,7 @@ class AddTask extends Component {
   // -- Definition
   static propTypes = {
     addTask: PropTypes.func,
+    options: PropTypes.arrayOf(PropTypes.object),
   }
   constructor(props) {
     super(props);
@@ -46,6 +48,7 @@ class AddTask extends Component {
           onChange={this.onInputChange}
           onKeyDown={this.onInputKeyDown}
         />
+        <Select options={this.props.options} />
         <button className={styles.button} onClick={this.onAddClick}>add</button>
       </div>
     );
