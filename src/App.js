@@ -16,12 +16,12 @@ class App extends Component {
 
     this.state = {
       tasks: [
-        { id: 1, title: 'Invitar a Bert a cenar', rank: 'leisure', done: false },
-        { id: 2, title: 'Dormir', rank: 'leisure', done: true },
-        { id: 3, title: 'Patinar', rank: 'sport', done: false },
-        { id: 4, title: 'Concierto The New Raemon', rank: 'music', done: false },
-        { id: 5, title: 'Cena en jleos', rank: 'food', done: false },
-        { id: 6, title: 'Llorar', rank: 'other', done: false },
+        { id: 1, title: 'Finish this todo-list', rank: 'leisure', done: false },
+        { id: 2, title: 'Update commits', rank: 'leisure', done: true },
+        { id: 3, title: 'Go to skate', rank: 'sport', done: false },
+        { id: 4, title: 'The New Raemon concert', rank: 'music', done: false },
+        { id: 5, title: 'Sushi dinner', rank: 'food', done: false },
+        { id: 6, title: 'Travel to Bcn', rank: 'leisure', done: false },
       ],
     };
   }

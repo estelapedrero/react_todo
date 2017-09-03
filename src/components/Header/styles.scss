@@ -1,15 +1,12 @@
 @import "../../styles/variables";
 
 .topnav {
-  height: 5rem;
+  min-height: 5rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
   // padding-left: 1em;
   // padding-right: 1em;
-  background-color: $alert-color;
+  background-color: $grey-light;
   color: $white;
-}
-.title {
-  // color: $primary-color;
 }

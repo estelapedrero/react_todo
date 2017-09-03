@@ -1,10 +1,11 @@
 @import "../../styles/variables";
 
 .footer {
-  background-color: $grey-lightest;
+  background-color: $grey-light;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 3rem;
   font-size: 0.8em;
   margin-top: 2em;
   p {

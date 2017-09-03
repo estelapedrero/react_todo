@@ -25,7 +25,7 @@ class AddTask extends Component {
     if (!this.state.title) return;
 
     this.props.addTask(this.state);
-    this.setState({ title: '' });
+    this.setState({ title: '', rank: 'other' });
   }
 
   onInputChange = event => {

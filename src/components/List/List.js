@@ -43,7 +43,7 @@ class List extends Component {
     const count = this.props.tasks.length;
 
     return count === 0
-      ? 'evrything is done'
+      ? 'Everything is done!'
       : `${count} ${count > 1 ? 'tasks' : 'task'} in the list`;
   }
 
