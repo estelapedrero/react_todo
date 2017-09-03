@@ -11,6 +11,7 @@ class Select extends Component {
       name="ranks"
       id="rank_select"
       onChange={this.props.onChange}
+      value={this.props.value}
     >
       {
         this.props.options.map(rank => (

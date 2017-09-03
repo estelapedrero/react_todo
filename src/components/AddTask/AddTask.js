@@ -53,7 +53,11 @@ class AddTask extends Component {
           onChange={this.onInputChange}
           onKeyDown={this.onInputKeyDown}
         />
-        <Select options={this.props.options} onChange={this.onSelectChange} />
+        <Select
+          options={this.props.options}
+          value={this.state.rank}
+          onChange={this.onSelectChange}
+        />
         <button className={styles.button} onClick={this.onAddClick}>add</button>
       </div>
     );
