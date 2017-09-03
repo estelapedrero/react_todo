@@ -3,10 +3,15 @@ import PropTypes from 'prop-types';
 
 class Select extends Component {
   static propTypes = {
+    onChange: PropTypes.func,
     options: PropTypes.arrayOf(PropTypes.object),
   }
   renderOptions = () => (
-    <select name="" id="">
+    <select
+      name="ranks"
+      id="rank_select"
+      onChange={this.props.onChange}
+    >
       {
         this.props.options.map(rank => (
           <option value={rank.value} key={rank.id}>

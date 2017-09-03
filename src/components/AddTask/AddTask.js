@@ -16,6 +16,7 @@ class AddTask extends Component {
 
     this.state = {
       title: '',
+      rank: 'other',
     };
   }
 
@@ -32,7 +33,6 @@ class AddTask extends Component {
   }
 
   onSelectChange = event => {
-    console.log(event.target);
     this.setState({ rank: event.target.value });
   }
 

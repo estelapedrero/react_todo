@@ -45,10 +45,6 @@ class App extends Component {
   }
 
   clickXClose = id => {
-    // console.log(id);
-    // const tasks = this.state.tasks.map(task => (
-    //   task.id === id ? { tasks.filter(task) } : task
-    // ));
     const tasks = this.state.tasks.filter(task => task.id !== id);
 
     this.setState({ tasks });
