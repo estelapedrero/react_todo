@@ -31,6 +31,11 @@ class AddTask extends Component {
     this.setState({ title: event.target.value });
   }
 
+  onSelectChange = event => {
+    console.log(event.target);
+    this.setState({ rank: event.target.value });
+  }
+
   onInputKeyDown = event => {
     if (event.which === ENTER_KEYCODE) {
       this.onAddClick();
@@ -48,7 +53,7 @@ class AddTask extends Component {
           onChange={this.onInputChange}
           onKeyDown={this.onInputKeyDown}
         />
-        <Select options={this.props.options} />
+        <Select options={this.props.options} onChange={this.onSelectChange} />
         <button className={styles.button} onClick={this.onAddClick}>add</button>
       </div>
     );

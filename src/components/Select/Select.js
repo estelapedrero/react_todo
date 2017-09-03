@@ -9,7 +9,7 @@ class Select extends Component {
     <select name="" id="">
       {
         this.props.options.map(rank => (
-          <option value={rank.value}>
+          <option value={rank.value} key={rank.id}>
             {rank.value}
           </option>
         ))
@@ -19,7 +19,7 @@ class Select extends Component {
 
   render() {
     return (
-      this.renderOptions
+      this.renderOptions()
     );
   }
 }

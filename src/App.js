@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import { AddTask, Footer, Header, List } from './components';
 import styles from './App.scss';
 
+const RANKS = [
+  { id: 1, value: 'leisure' },
+  { id: 2, value: 'food' },
+  { id: 3, value: 'music' },
+  { id: 4, value: 'other' },
+  { id: 5, value: 'sport' },
+];
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -14,13 +22,6 @@ class App extends Component {
         { id: 4, title: 'Concierto The New Raemon', rank: 'music', done: false },
         { id: 5, title: 'Cena en jleos', rank: 'food', done: false },
         { id: 6, title: 'Llorar', rank: 'other', done: false },
-      ],
-      ranks: [
-        { id: 1, value: 'leisure' },
-        { id: 2, value: 'food' },
-        { id: 3, value: 'music' },
-        { id: 4, value: 'other' },
-        { id: 5, value: 'sport' },
       ],
     };
   }
@@ -58,7 +59,7 @@ class App extends Component {
       <div className={styles.content}>
         <Header />
         <div className={styles.wrapper}>
-          <AddTask addTask={this.addTask} options={this.state.ranks} />
+          <AddTask addTask={this.addTask} options={RANKS} />
           <div className={styles.listbox}>
             <p>Short compilation of everything I should do next</p>
             <List
